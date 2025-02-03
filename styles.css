@@ -1,0 +1,123 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.completed-task {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.task-item {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.task-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.task-drag-handle {
+    cursor: move;
+    color: #999;
+    margin-left: auto;
+    padding: 0 5px;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.task-time {
+    color: #888;
+    font-size: 0.85em;
+}
+
+.sortable-list .task-item {
+    user-select: none;
+}
+
+.task-item.dragging {
+    opacity: 0.5;
+    background-color: #f8f9fa;
+}
+
+.color-picker {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 2px solid transparent;
+}
+
+.color-circle:hover {
+    transform: scale(1.1);
+}
+
+.color-circle.selected {
+    border: 2px solid #000;
+}
+
+.color-circle[data-color="crimson"] {
+    background-color: crimson;
+}
+
+.color-circle[data-color="orange"] {
+    background-color: orange;
+}
+
+.color-circle[data-color="blue"] {
+    background-color: blue;
+}
+
+.color-circle[data-color="teal"] {
+    background-color: teal;
+}
+
+.color-circle[data-color="purple"] {
+    background-color: purple;
+}
+.task-drag-handle {
+    cursor: move;
+    color: #999;
+    margin-left: auto;
+    padding: 0 5px;
+    touch-action: none; /* Предотвращает стандартное поведение браузера при касании */
+    user-select: none; /* Предотвращает выделение текста */
+    -webkit-user-select: none;
+}
+
+.task-item.dragging {
+    opacity: 0.5;
+    background-color: #f8f9fa;
+    position: relative;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+}
