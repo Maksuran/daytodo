@@ -2,7 +2,7 @@ class TaskTracker {
     constructor() {
         this.currentDate = new Date().toISOString().split('T')[0];
         this.currentTaskId = null;
-        this.availableColors = ['crimson', 'orange', 'blue', 'teal', 'purple'];
+        this.availableColors = ['crimson', 'orange', 'blue', 'teal', 'black'];
         this.selectedColor = this.availableColors[0];
         this.draggedItem = null;
         this.touchStartY = 0;
